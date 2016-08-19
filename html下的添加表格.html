@@ -5,10 +5,11 @@
     <title> 动态创建表</title>
 </head>
 <body>
-
+<div>
 <input type="button" value="创建一张表" onclick="createTable()">
 <input type="button" value="添加一行" onclick="createTR()">
 <input type="button" value="添加一列"  onclick="createTD()">
+</div>
 <script  type="application/javascript">
     function createTable(){
     var table_doc=document.createElement('table');
@@ -37,6 +38,7 @@
         doc_td.style.backgroundColor='red';
         doc_tr.appendChild(doc_td);
     }
+
 
 
 </script>
