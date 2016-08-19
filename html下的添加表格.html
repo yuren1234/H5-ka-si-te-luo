@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title> 动态创建表</title>
+</head>
+<body>
+
+<input type="button" value="创建一张表" onclick="createTable()">
+<input type="button" value="添加一行" onclick="createTR()">
+<input type="button" value="添加一列"  onclick="createTD()">
+<script  type="application/javascript">
+    function createTable(){
+    var table_doc=document.createElement('table');
+        table_doc.id='tb';
+        table_doc.border='1px';
+        table_doc.width='200px';
+        table_doc.height='30px';
+        document.body.appendChild(table_doc);
+        createTR();
+        //createTD();
+
+
+    }
+    function createTR(){
+        var doc_tr=document.createElement('tr');
+        var table_doc=document.getElementById('tb');
+        table_doc.appendChild(doc_tr);
+        createTD();
+
+    }//根据name获取数组，获取数组的最后一个数
+    function createTD(){
+    var  array=document.getElementsByTagName('tr');
+     var doc_tr=array[array.length-1];
+      var doc_td=document.createElement('td');
+        doc_td.innerHTML='添加的单元格';
+        doc_td.style.backgroundColor='red';
+        doc_tr.appendChild(doc_td);
+    }
+
+
+</script>
+
+</body>
+</html>

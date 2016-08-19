@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+
+<button   onclick="tianjia()" >添加一张表格</button>
+<button   onclick="yihang()"   >添加一行</button>
+<button    >添加一列</button>
+
+
+
+
+
+
+
+
+
+
+<script type="application/javascript" >
+
+    var  kuang =document.createElement('table');
+    kuang.style.border='1px solid green';
+    kuang.style.backgroundColor='red';
+
+
+function tianjia(){
+    document.body.appendChild(kuang);
+
+    var hang=document.createElement('tr');
+    kuang.appendChild(hang);
+
+    hang.innerHTML='我是第一行';
+}
+
+
+
+
+      function yihang(){
+          document.body.appendChild(kuang);
+          var hang=document.createElement('tr');
+          kuang.appendChild(hang);
+
+
+          var waihang=document.createElement('td');
+          waihang.innerHTML='一行';
+          hang.appendChild(waihang);
+
+
+
+
+
+
+
+
+
+
+      }
+
+
+
+</script>
+</body>
+</html>
